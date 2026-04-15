@@ -25,7 +25,7 @@ int main(){
     for(int i = 1; i <= num; i++){
         for(int j = 1; j <= capacity; j++){
             if(j >= weight[i]){
-                ks[i][j] = max(ks[i-1][j-1],profit[i]+ks[i-1][j + weight[i]]);
+                ks[i][j] = max(ks[i-1][j],profit[i]+ks[i-1][j - weight[i]]);
             }
 
             else 
